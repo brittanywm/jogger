@@ -4,14 +4,20 @@
   /*color: blue;*/
 }
 
-.toDoListComponent {
+.dashboardComponent {
   border: 1px solid blue;
   margin: 10px;
   padding: 10px;
 }
 
-.addTodoComponent {
+.addRunComponent {
   border: 1px solid green;
+  margin: 10px;
+  padding: 10px;
+}
+
+.runHistoryComponent {
+  border: 1px solid orange;
   margin: 10px;
   padding: 10px;
 }

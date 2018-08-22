@@ -1,7 +1,7 @@
 import React, {Component} from 'react'; // Object destructuring
 import {hot} from "react-hot-loader";
-import AddTodo from './AddTodo';
-import TodoList from './TodoList';
+import AddRun from './AddRun';
+import RunHistory from './RunHistory';
 import './App.css'
 import Dashboard from './Dashboard';
 
@@ -10,12 +10,12 @@ class App extends Component {
         super(props);
 
         this.state = { list: [] } // initialize empty array
-        this.addTodo = this.addTodo.bind(this);
-        this.deleteTodo = this.deleteTodo.bind(this);
+        this.addRun = this.addRun.bind(this);
+        this.deleteRun = this.deleteRun.bind(this);
         this.getRunCount = this.getRunCount.bind(this);
     }
 
-    addTodo(value) {
+    addRun(value) {
         const list = this.state.list;
         // const { list } = this.state; <-- object deconstruction
         if (value) {
@@ -24,7 +24,7 @@ class App extends Component {
         }
      }
 
-     deleteTodo(id) {
+     deleteRun(id) {
         const list = this.state.list;
         const results = [...list.slice(0, id), ...list.slice(id + 1)];
         this.setState({list: results}); // setState triggers render
@@ -38,8 +38,8 @@ class App extends Component {
     render() {
         return (<div>
             <Dashboard getRunCount={this.getRunCount}/>
-            <AddTodo addTodo={this.addTodo}/>
-            <TodoList list={this.state.list} deleteTodo={this.deleteTodo} getRunCount={this.getRunCount}/>
+            <AddRun addRun={this.addRun}/>
+            <RunHistory list={this.state.list} deleteRun={this.deleteRun} getRunCount={this.getRunCount}/>
         </div>);
     }
  }

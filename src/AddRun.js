@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class AddTodo extends Component {
+class AddRun extends Component {
     constructor(props) {
         super(props);
 
@@ -19,7 +19,7 @@ class AddTodo extends Component {
         event.preventDefault(); // need to do this so page won't reload
 
         // notify App that submission was made so we can tack something on to list
-        this.props.addTodo(this.state.val);
+        this.props.addRun(this.state.val);
         //console.log('hi'this.state.val);
 
         // reset text input back to empty
@@ -28,7 +28,7 @@ class AddTodo extends Component {
 
     render() {
         return (
-        <div className= "addTodoComponent">
+        <div className= "addRunComponent">
           <h2>Add Run</h2>
           Location:
           <form onSubmit={this.handleSubmit}>
@@ -40,4 +40,4 @@ class AddTodo extends Component {
     }
 }
 
-export default AddTodo;
+export default AddRun;

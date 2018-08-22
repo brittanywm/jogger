@@ -1,9 +1,9 @@
 import React from 'react'; // Dumb component because only need to deal with props (not states)
-import AddTodo from './AddTodo';
+import AddRun from './AddRun';
 
 const Dashboard = props => {
   return (
-      <div className= "toDoListComponent">
+      <div className= "dashboardComponent">
           <h2>Dashboard</h2>
           <p><strong>Total Runs:</strong> {props.getRunCount()}</p>
           <p><strong>Total Miles:</strong></p>

@@ -3,3 +3,15 @@
   font-family: Arial, Helvetica, sans-serif;
   /*color: blue;*/
 }
+
+.toDoListComponent {
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+
+.addTodoComponent {
+  border: 1px solid green;
+  margin: 10px;
+  padding: 10px;
+}

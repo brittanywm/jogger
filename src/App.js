@@ -18,6 +18,7 @@ class App extends Component {
               location: "Venice, CA",
               date: "2018-08-22",
               distance: 5,
+              terrain: "City",
             }
           ]
         }
@@ -51,7 +52,7 @@ class App extends Component {
          let numMiles = parseInt(this.state.allRunDays[i].distance);
          totalMiles += numMiles;
        }
-       console.log("total miles", totalMiles);
+       //console.log("total miles", totalMiles);
        return totalMiles;
      }
 

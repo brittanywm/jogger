@@ -2,7 +2,7 @@ import React from 'react'; // Dumb component because only need to deal with prop
 import AddRun from './AddRun';
 
 // stateless functional component 
-const RunHistoryRow = ({location, date, distance}) => (
+const RunHistoryRow = ({location, date, distance, terrain}) => (
     <tr>
         <td>
             {location}
@@ -12,6 +12,9 @@ const RunHistoryRow = ({location, date, distance}) => (
         </td>
         <td>
             {distance}
+        </td>
+        <td>
+            {terrain}
         </td>
     </tr>
 )

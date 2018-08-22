@@ -14,6 +14,7 @@ const RunHistoryList = ({days}) => {
                       <th>Location</th>
                       <th>Date</th>
                       <th>Distance</th>
+                      <th>Terrain</th>
                   </tr>
               </thead>
               <tbody>
@@ -21,7 +22,8 @@ const RunHistoryList = ({days}) => {
                       <RunHistoryRow key={i}
                               location={day.location}
                               date={day.date}
-                              distance={day.distance}/> 
+                              distance={day.distance}
+                              terrain={day.terrain}/> 
                   )}
               </tbody>
           </table>

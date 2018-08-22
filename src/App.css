@@ -22,10 +22,11 @@
   padding: 10px;
 }
 
+
 td {
-  padding: 10px;
+  text-align: left;
 }
 
 tr {
-  padding: 10px;
+  text-align: left;
 }

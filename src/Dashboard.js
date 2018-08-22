@@ -5,7 +5,7 @@ const Dashboard = props => {
   return (
       <div className= "dashboardComponent">
           <h2>Dashboard</h2>
-          {/* <p><strong>Total Runs:</strong> {props.getRunCount()}</p> */}
+          <p><strong>Total Runs:</strong> {props.getRunCount()}</p>
           <p><strong>Total Miles:</strong></p>
           <p><strong>Percent Trail:</strong></p>
           <p><strong>Percent City:</strong></p>

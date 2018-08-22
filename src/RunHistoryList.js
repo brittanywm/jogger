@@ -8,6 +8,7 @@ const RunHistoryList = ({days}) => {
       <div className="runHistoryComponent">
       <h2>Run History</h2>
           <table>
+          
               <thead>
                   <tr>
                       <th>Location</th>

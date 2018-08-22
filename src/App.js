@@ -18,6 +18,7 @@ class App extends Component {
           ]
         }
         this.addRun = this.addRun.bind(this);
+        this.getRunCount = this.getRunCount.bind(this);
       }
 
     addRun(newRun) {
@@ -36,15 +37,13 @@ class App extends Component {
      }
 
      getRunCount() {
-    //    console.log("Total number of runs", this.state.location.length);
-    //    console.log("LOCATION LENGTH", this.state.location.length)
-    //    return this.state.location.length;
+      return this.state.allRunDays.length;
      }
 
     render() {
       return (
         <div className="app">
-          <Dashboard />
+          <Dashboard getRunCount={this.getRunCount}/>
           <AddRun onNewDay={this.addRun}/> 
           <RunHistoryList days={this.state.allRunDays} />
         </div>

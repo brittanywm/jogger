@@ -1,25 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+label { 
+  display: block; 
+  width: 100px; 
+  padding-top: 20px;
+}
+
 .App {
   margin: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   /*color: blue;*/
 }
 
+.appHouse {
+  background-color: #090934;
+  color: white;
+  padding: 10px;
+}
+
 .dashboardComponent {
   border: 1px solid blue;
   margin: 10px;
   padding: 10px;
+  height: 300px;
 }
 
 .addRunComponent {
   border: 1px solid green;
   margin: 10px;
   padding: 10px;
+  height: 300px;
 }
 
 .runHistoryComponent {
   border: 1px solid orange;
   margin: 10px;
   padding: 10px;
+  height: 300px;
 }
 
 
@@ -29,4 +50,28 @@ td {
 
 tr {
   text-align: left;
+}
+
+.navBar ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navBar li {
+  float: left;
+}
+
+.navBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navBar li a:hover {
+  background-color: #111;
 }

@@ -26,13 +26,13 @@ export const AddRun = ({ location, date, distance, onNewDay }) => {
               type="text" 
               required 
               ref={input => _location = input}/>
-  
+        <br />
         <label htmlFor="date">Date</label>
         <input id="date" 
               type="date" 
               required 
               ref={input => _date = input}/>
-        
+        <br />
         <label htmlFor="distance">Distance</label>
         <input id="distance" 
               type="distance" 

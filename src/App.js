@@ -58,17 +58,23 @@ class App extends Component {
 
     render() {
       return (
-        <div>
+        <div className="appHouse">
         <Router history={hashHistory}>
           <div>
-          
-          <Route path="/dashboard" render={() => <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>} />
-          <Route path="/add-run" render={()=><AddRun onNewDay={this.addRun}/>}/>
-          <Route path="/run-history-list" render={()=><RunHistoryList days={this.state.allRunDays}/>}/>
-          
-          <li><Link to='/dashboard'>Dashboard</Link></li>
-          <li><Link to='/add-run'>Add Run</Link></li>
-          <li><Link to='/run-history-list'>Run History</Link></li>
+            <div className="Logo">
+              <h2>Jogger</h2>
+            </div>
+            <Route path="/dashboard" render={() => <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>} />
+            <Route path="/add-run" render={()=><AddRun onNewDay={this.addRun}/>}/>
+            <Route path="/run-history-list" render={()=><RunHistoryList days={this.state.allRunDays}/>}/>
+            
+            <div className="navBar">
+              <ul>
+                <li><Link to='/dashboard'>Dashboard</Link></li>
+                <li><Link to='/add-run'>Add Run</Link></li>
+                <li><Link to='/run-history-list'>Run History</Link></li>
+              </ul>
+            </div>
           </div>
         </Router>
       

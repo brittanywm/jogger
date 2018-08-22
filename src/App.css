@@ -2,6 +2,8 @@
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 label { 
@@ -24,9 +26,10 @@ label {
 
 .dashboardComponent {
   border: 1px solid blue;
-  margin: 10px;
-  padding: 10px;
+  /* margin: 10px; */
+  /*padding: 10px;*/
   height: 400px;
+  width:100%;
 }
 
 .addRunComponent {

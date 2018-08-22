@@ -25,6 +25,10 @@ class App extends Component {
         this.addRun = this.addRun.bind(this);
         this.getRunCount = this.getRunCount.bind(this);
         this.getMileCount = this.getMileCount.bind(this);
+        this.getTerrainPercent = this.getTerrainPercent.bind(this);
+        this.getTrailPercent = this.getTrailPercent.bind(this);
+        this.getCityPercent = this.getCityPercent.bind(this);
+        this.getIndoorPercent = this.getIndoorPercent.bind(this);
       }
 
     addRun(newRun) {
@@ -46,13 +50,58 @@ class App extends Component {
       return this.state.allRunDays.length;
      }
 
+     getTerrainPercent() {
+      let runCount = this.state.allRunDays.length;
+      let numTrailRuns = 0;
+      let numCityRuns = 0;
+      let numIndoorRuns= 0;
+      let result = [];
+
+      for (let i = 0; i < this.state.allRunDays.length; i++) {
+        if (this.state.allRunDays[i].terrain === "Trail") {
+          numTrailRuns++;
+        } 
+        if (this.state.allRunDays[i].terrain === "City") {
+          numCityRuns++;
+        }
+        if (this.state.allRunDays[i].terrain === "Indoor") {
+          numIndoorRuns++;
+        }
+      }
+
+      numTrailRuns = Math.floor((numTrailRuns/runCount) * 100);
+      numCityRuns = Math.floor((numCityRuns/runCount) * 100);
+      numIndoorRuns = Math.floor((numIndoorRuns/runCount) * 100);
+
+      result.push(numTrailRuns);
+      result.push(numCityRuns);
+      result.push(numIndoorRuns);
+
+      return result;
+     }
+
+     getTrailPercent() {
+       let result = this.getTerrainPercent();
+       return result[0];
+     }
+
+     getCityPercent() {
+       let result = this.getTerrainPercent();
+       return result[1];
+     }
+
+     getIndoorPercent() {
+       let result = this.getTerrainPercent();
+       return result[2];
+     }
+
      getMileCount() {
        let totalMiles = 0;
        for (let i = 0; i < this.state.allRunDays.length; i++) {
          let numMiles = parseInt(this.state.allRunDays[i].distance);
          totalMiles += numMiles;
        }
-       //console.log("total miles", totalMiles);
+       
        return totalMiles;
      }
 
@@ -65,7 +114,7 @@ class App extends Component {
             <div className="Logo">
               <h2>Jogger</h2>
             </div>
-            <Route path="/dashboard" render={() => <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>} />
+            <Route path="/dashboard" render={() => <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount} getTrailPercent={this.getTrailPercent} getCityPercent={this.getCityPercent} getIndoorPercent={this.getIndoorPercent}/>} />
             <Route path="/add-run" render={()=><AddRun onNewDay={this.addRun}/>}/>
             <Route path="/run-history-list" render={()=><RunHistoryList days={this.state.allRunDays}/>}/>
             

@@ -12,9 +12,7 @@ export const AddRun = ({ location, date, distance, terrain, onNewDay }) => {
         
     }
     let resultTerrain = getTerrain();
-    //console.log("RESULT", resultTerrain);
-
-
+  
       e.preventDefault()
       onNewDay({
         location: _location.value,
@@ -51,7 +49,7 @@ export const AddRun = ({ location, date, distance, terrain, onNewDay }) => {
               required 
               ref={input => _distance = input}/>
         <br />
-        <label htmlFor="terrain">Type</label>
+        <label htmlFor="terrain">Terrain</label>
         <div>
           <select id="terrain">
               <option value="Trail">Trail</option>

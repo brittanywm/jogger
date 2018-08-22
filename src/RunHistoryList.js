@@ -13,7 +13,7 @@ const RunHistoryList = ({days}) => {
                   <tr>
                       <th>Location</th>
                       <th>Date</th>
-                      <th>Distance</th>
+                      <th>Distance (miles)</th>
                       <th>Terrain</th>
                   </tr>
               </thead>

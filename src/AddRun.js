@@ -4,35 +4,66 @@ class AddRun extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {val: ''}; // state must always be an object
+        this.state = {
+            valLocation: '',
+            valDate: '',
+            valDistance: '',
 
-        this.handleChange = this.handleChange.bind(this); // this in all three cases is React component
+        }; // state must always be an object
+
+        this.handleChangeLocation = this.handleChangeLocation.bind(this); // this in all three cases is React component
+        this.handleChangeDate = this.handleChangeDate.bind(this);
+        this.handleChangeDistance = this.handleChangeDistance.bind(this);
+
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChangeLocation(event) {
         // this.setState triggers a re-render. this.state does not!
-        this.setState({val: event.target.value}) 
+        this.setState({valLocation: event.target.value}) 
+    }
+
+    handleChangeDate(event) {
+        // this.setState triggers a re-render. this.state does not!
+        this.setState({valDate: event.target.value}) 
+    }
+
+    handleChangeDistance(event) {
+        // this.setState triggers a re-render. this.state does not!
+        this.setState({valDistance: event.target.value}) 
     }
 
     handleSubmit(event) {
         event.preventDefault(); // need to do this so page won't reload
 
         // notify App that submission was made so we can tack something on to list
-        this.props.addRun(this.state.val);
+        this.props.addRun(this.state.valLocation, this.state.valDate, this.state.valDistance);
+        // this.props.addRun(this.state.valDate);
+        // this.props.addRun(this.state.valDistance);
         //console.log('hi'this.state.val);
 
         // reset text input back to empty
-        this.setState({val: ''});
+        this.setState({valLocation: ''});
+        this.setState({valDate: ''});
+        this.setState({valDistance: ''});
     }
 
     render() {
         return (
         <div className= "addRunComponent">
           <h2>Add Run</h2>
-          Location:
+          
           <form onSubmit={this.handleSubmit}>
-              <input type="text" value={this.state.val} onChange={this.handleChange} />
+              Location:
+              <input type="text" value={this.state.valLocation} onChange={this.handleChangeLocation} />
+
+              Date:
+              <input type="text" value={this.state.valDate} onChange={this.handleChangeDate} />
+
+              Distance:
+              <input type="text" value={this.state.valDistance} onChange={this.handleChangeDistance} />
+            
+              <br/>
               <input type="submit" value="Add" />
           </form>
         </div>

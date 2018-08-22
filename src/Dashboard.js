@@ -2,6 +2,7 @@ import React from 'react'; // Dumb component because only need to deal with prop
 import AddRun from './AddRun';
 
 const Dashboard = props => {
+
   return (
       <div className= "dashboardComponent">
           <h2>Dashboard</h2>

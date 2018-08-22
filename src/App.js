@@ -1,9 +1,13 @@
 import React, {Component} from 'react'; // Object destructuring
 import {hot} from "react-hot-loader";
+import './App.css'
+import Menu from './Menu'
+import { BrowserRouter as Router, Route, hashHistory, Link } from "react-router-dom";
+import Dashboard from './Dashboard';
 import AddRun from './AddRun';
 import RunHistoryList from './RunHistoryList'
-import './App.css'
-import Dashboard from './Dashboard';
+
+
 
 class App extends Component {
     constructor(props) {
@@ -51,13 +55,34 @@ class App extends Component {
        return totalMiles;
      }
 
+
     render() {
       return (
-        <div className="app">
-          <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>
-          <AddRun onNewDay={this.addRun}/> 
-          <RunHistoryList days={this.state.allRunDays} />
+        <div>
+        <Router history={hashHistory}>
+          <div>
+          
+          <Route path="/dashboard" render={() => <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>} />
+          <Route path="/add-run" render={()=><AddRun onNewDay={this.addRun}/>}/>
+          <Route path="/run-history-list" render={()=><RunHistoryList days={this.state.allRunDays}/>}/>
+          
+          <li><Link to='/dashboard'>Dashboard</Link></li>
+          <li><Link to='/add-run'>Add Run</Link></li>
+          <li><Link to='/run-history-list'>Run History</Link></li>
+          </div>
+        </Router>
+      
         </div>
+       
+    
+        
+          // <div className="app">
+          //   <h2>Jogger</h2>
+          //   <Menu />
+          //   <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>
+          //   <AddRun onNewDay={this.addRun}/> 
+          //   <RunHistoryList days={this.state.allRunDays} />
+          // </div>
       )
     }
  }

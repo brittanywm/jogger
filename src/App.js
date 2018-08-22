@@ -13,12 +13,13 @@ class App extends Component {
             {
               location: "Venice, CA",
               date: "2018-08-22",
-              distance: "5k",
+              distance: 5,
             }
           ]
         }
         this.addRun = this.addRun.bind(this);
         this.getRunCount = this.getRunCount.bind(this);
+        this.getMileCount = this.getMileCount.bind(this);
       }
 
     addRun(newRun) {
@@ -40,10 +41,20 @@ class App extends Component {
       return this.state.allRunDays.length;
      }
 
+     getMileCount() {
+       let totalMiles = 0;
+       for (let i = 0; i < this.state.allRunDays.length; i++) {
+         let numMiles = parseInt(this.state.allRunDays[i].distance);
+         totalMiles += numMiles;
+       }
+       console.log("total miles", totalMiles);
+       return totalMiles;
+     }
+
     render() {
       return (
         <div className="app">
-          <Dashboard getRunCount={this.getRunCount}/>
+          <Dashboard getRunCount={this.getRunCount} getMileCount={this.getMileCount}/>
           <AddRun onNewDay={this.addRun}/> 
           <RunHistoryList days={this.state.allRunDays} />
         </div>

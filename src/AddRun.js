@@ -40,7 +40,7 @@ export const AddRun = ({ location, date, distance, onNewDay }) => {
               ref={input => _distance = input}/>
   
 
-        <button>Add Day</button>
+        <button>Add</button>
       </form>
       </div>
     )

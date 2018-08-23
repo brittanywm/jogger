@@ -6,7 +6,7 @@ import RunHistoryRow from './RunHistoryRow'
 const RunHistoryList = ({days}) => {
   return (
       <div className="runHistoryComponent">
-      <h2>Run History</h2>
+      {/* <h2>Run History</h2> */}
           <table>
           
               <thead>

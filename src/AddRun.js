@@ -28,7 +28,7 @@ export const AddRun = ({ location, date, distance, terrain, onNewDay }) => {
   
     return (
       <div className="addRunComponent">
-      <h2>Add Run</h2>
+      {/* <h2>Add Run</h2> */}
       <form onSubmit={submit} className="add-run-form">
   
         <label htmlFor="location">Location</label>

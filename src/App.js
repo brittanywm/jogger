@@ -121,7 +121,7 @@ class App extends Component {
             <div className="navBar">
               <ul>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
-                <li><Link to='/add-run'>Add Run</Link></li>
+                <li className="customMiddleLink"><Link to='/add-run'>Add Run</Link></li>
                 <li><Link to='/run-history-list'>Run History</Link></li>
               </ul>
             </div>

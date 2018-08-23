@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -49,7 +50,8 @@ h2 {
 .Logo {
   padding-left: 20px;
   font-size: 30px;
-  color: #FFEB3B;
+  /* font-family: 'Baloo Bhaina', cursive; */
+  color: #fff338;
 }
 
 .App {

@@ -1,6 +1,5 @@
 import React, {Component} from 'react'; // Object destructuring
 import {hot} from "react-hot-loader";
-import './App.css'
 import Menu from './Menu'
 import { BrowserRouter as Router, Route, hashHistory, Link } from "react-router-dom";
 import Dashboard from './Dashboard';

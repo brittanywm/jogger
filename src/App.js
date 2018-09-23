@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, hashHistory, Link } from "react-router-
 import Dashboard from './Dashboard';
 import AddRun from './AddRun';
 import RunHistoryList from './RunHistoryList'
+import './App.css';
 
 
 

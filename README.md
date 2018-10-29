@@ -2,9 +2,7 @@
 
 React app to keep track of your runs with dashboard showing aggregate data of total runs, miles, and percentage of run types completed (trail, city, indoor).
 
-<hr>
-<img src="http://zillberrycom.fatcow.com/jogger/jogger_dashboard.png" width="800">
-<hr>
+<img src="http://zillberrycom.fatcow.com/jogger/jogger_dashboard.png" width="800" alt="Jogger Dashboard">
 
 ## Getting Started
 

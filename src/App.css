@@ -50,14 +50,12 @@ h2 {
 .Logo {
   padding-left: 20px;
   font-size: 30px;
-  /* font-family: 'Baloo Bhaina', cursive; */
   color: #fff338;
 }
 
 .App {
   margin: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  /*color: blue;*/
 }
 
 .appHouse {
@@ -67,9 +65,7 @@ h2 {
 }
 
 .dashboardComponent {
-    /* background-color: black; */
-    /* padding-top: 30px; */
-    height: 410px;
+  height: 410px;
 }
 
 .totalRuns {
@@ -91,7 +87,6 @@ h2 {
 
 .leftCol {
   float: left;
-  /* background-color: gray; */
   border-right: 1px solid #436182;
   height: 310px;
   width: 33%;
@@ -100,21 +95,15 @@ h2 {
 .rightCol {
   float: left;
   padding-top: 90px;
-  /* background-color: rgb(50, 102, 170); */
   width: 50%;
 }
 
 .addRunComponent {
-  /* border: 1px solid green; */
-  /* margin: 10px; */
   padding-left: 60px;
   height: 410px;
 }
 
 .runHistoryComponent {
-  /* border: 1px solid orange; */
-  /* margin: 10px;
-  padding: 10px; */
   padding-left: 50px;
   height: 410px;
 }
@@ -168,7 +157,6 @@ tr {
 
 .navBar {
   border-top: 1px solid #79b1c3;
-  /* text-align: center; */
   padding-left: 30px;
 }
 

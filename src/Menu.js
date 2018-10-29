@@ -1,9 +1,8 @@
-import React from 'react'; // Dumb component because only need to deal with props (not states)
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Menu = () => (
- 
-   <nav className="menu">
+  <nav className="menu">
     <Link to="/dashboard">
       <p>DASHBBOARD</p>
     </Link>
@@ -16,5 +15,4 @@ const Menu = () => (
   </nav>
 )
  
-
 export default Menu;
